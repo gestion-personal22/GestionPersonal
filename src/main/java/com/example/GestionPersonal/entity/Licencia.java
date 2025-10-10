@@ -19,7 +19,6 @@ public class Licencia {
 	private Long id;
 	
 	@Basic
-	private TipoLicencia tipo;
 	private int numeroSolicitud;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -53,12 +52,11 @@ public class Licencia {
 		super();
 	}
 
-	public Licencia(Long id, TipoLicencia tipo, int numeroSolicitud, LocalDate fechaSolicitud, LocalDate antiguedad,
+	public Licencia(Long id, int numeroSolicitud, LocalDate fechaSolicitud, LocalDate antiguedad,
 			LocalDate tiempoLicencia, LocalDate fechaInicio, LocalDate fechaFin, Legajo legajo,
 			TipoLicencia tipoLicencia, Novedad novedad) {
 		super();
 		this.id = id;
-		this.tipo = tipo;
 		this.numeroSolicitud = numeroSolicitud;
 		this.fechaSolicitud = fechaSolicitud;
 		this.antiguedad = antiguedad;
@@ -70,20 +68,14 @@ public class Licencia {
 		this.novedad = novedad;
 	}
 
+
+
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public TipoLicencia getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(TipoLicencia tipo) {
-		this.tipo = tipo;
 	}
 
 	public int getNumeroSolicitud() {
