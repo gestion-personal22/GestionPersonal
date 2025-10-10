@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.example.GestionPersonal.entity.Legajo;
 import com.example.GestionPersonal.service.ILegajoService;
 
@@ -64,12 +63,5 @@ public class LegajoContoller {
 		
 		return null;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 }
