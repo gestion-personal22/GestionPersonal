@@ -1,4 +1,4 @@
-package com.example.GestionPersonal.service.imple;
+package com.example.GestionPersonal.service;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.GestionPersonal.entity.Nomina;
 import com.example.GestionPersonal.repository.INominaRepository;
-import com.example.GestionPersonal.service.INominaService;
 
 @Service
 public class NominaService implements INominaService {
