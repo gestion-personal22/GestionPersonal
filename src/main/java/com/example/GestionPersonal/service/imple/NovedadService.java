@@ -48,7 +48,7 @@ public class NovedadService implements INovedadService{
 	@Override
 	public List<Novedad> listarNovedad() {
 		// TODO Auto-generated method stub
-		return repoNovedad.findAll();;
+		return repoNovedad.findAll();
 	}
 
 }

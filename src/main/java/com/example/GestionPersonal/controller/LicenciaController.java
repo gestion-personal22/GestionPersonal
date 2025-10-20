@@ -13,7 +13,6 @@ import com.example.GestionPersonal.entity.Licencia;
 import com.example.GestionPersonal.service.ILicenciaService;
 
 
-
 @Controller
 @RequestMapping("/licencia")
 public class LicenciaController {
