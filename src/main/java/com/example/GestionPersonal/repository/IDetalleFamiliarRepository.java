@@ -2,10 +2,9 @@ package com.example.GestionPersonal.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.example.GestionPersonal.entity.Licencia;
+import com.example.GestionPersonal.entity.DetalleFamiliar;
 
-@Repository 
-public interface ILicenciaRepository extends JpaRepository<Licencia, Long> {
+@Repository
+public interface IDetalleFamiliarRepository extends JpaRepository<DetalleFamiliar, Long>{
 
-	
 }
