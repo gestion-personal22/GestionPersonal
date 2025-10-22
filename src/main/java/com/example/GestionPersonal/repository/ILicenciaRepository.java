@@ -6,6 +6,5 @@ import com.example.GestionPersonal.entity.Licencia;
 
 @Repository 
 public interface ILicenciaRepository extends JpaRepository<Licencia, Long> {
-
 	
 }
