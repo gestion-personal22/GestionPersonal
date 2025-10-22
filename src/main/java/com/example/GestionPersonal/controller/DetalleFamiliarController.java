@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.example.GestionPersonal.entity.DetalleFamiliar;
-import com.example.GestionPersonal.service.imple.IDetalleFamiliarService;
+import com.example.GestionPersonal.service.IDetalleFamiliarService;
+
 
 @Controller
 @RequestMapping("/detalleFamiliar")

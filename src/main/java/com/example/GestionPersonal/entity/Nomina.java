@@ -12,7 +12,7 @@ import jakarta.persistence.OneToMany;
 public class Nomina {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Basic

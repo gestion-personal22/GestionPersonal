@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.example.GestionPersonal.entity.Direccion;
-import com.example.GestionPersonal.service.imple.IDireccionService;
+import com.example.GestionPersonal.service.IDireccionService;
 
 @Controller
 @RequestMapping("/direccion")

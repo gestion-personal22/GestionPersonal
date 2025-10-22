@@ -15,7 +15,7 @@ import jakarta.persistence.OneToOne;
 public class Novedad {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Basic

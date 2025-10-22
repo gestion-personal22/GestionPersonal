@@ -13,7 +13,7 @@ import com.example.GestionPersonal.service.IEstadoCivilService;
 
 @Controller
 @RequestMapping("/estadocivil")
-public class IEstadoCivilController {
+public class EstadoCivilController {
 	
 	@Autowired
 	private IEstadoCivilService servEstadoC;
