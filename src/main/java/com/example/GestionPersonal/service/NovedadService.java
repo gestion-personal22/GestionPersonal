@@ -3,11 +3,13 @@ package com.example.GestionPersonal.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.GestionPersonal.entity.Novedad;
 import com.example.GestionPersonal.repository.INovedadRepository;
 import com.example.GestionPersonal.service.INovedadService;
 
+@Service
 public class NovedadService implements INovedadService{
 	
 	@Autowired
