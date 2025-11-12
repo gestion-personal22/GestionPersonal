@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    
+        
+    <title>Formulario de Solicitud</title>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="card">
+            <div class="card-header text-white bg-dark">
+                <h3 class="text-center">SOLICITUD DE LICENCIA</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <h3>DATOS PERSONALES</h3>
+                    <input type="hidden">
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Apellido</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Nombre</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-4">
+                            <label class="col-form-label">D.N.I</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                                </div>
+                                <input type="number" class="form-control"  required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <label class="col-form-label">Antiguedad</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-history"></i></span>
+                                </div>
+                                <input type="number" class="form-control" required>
+                            </div>
+                        </div>
+                         <div class="col-sm-12 col-md-4">
+                            <label class="col-form-label">Cargo</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div>
+                                <input type="text" class="form-control"  required>
+                            </div>
+                        </div>
+                    </div>
+               
+                    <h2>DATOS DE SOLICITUD</h2>
+               
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Numero de Solicitud</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                </div>
+                                <input type="number" class="form-control"  required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Fecha de Solicitud</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Fecha Inicio</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-plus"></i></span>
+                                </div>
+                                <input type="date" class="form-control"  required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Fecha Finalizacion</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-minus"></i></span>
+                                </div>
+                                <input type="date" class="form-control"  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Tiempo Licencia</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-hourglass-half"></i></span>
+                                </div>
+                                <input type="number" class="form-control"  required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Tipo Licencia </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-file-alt"></i></span>
+                                </div>
+                                <select class="form-control" required>
+                                    <option value="">Elegir...</option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-save"></i> Guardar
+                </button>
+                <a class="btn btn-danger">
+                    <i class="fa fa-close"></i> Cancelar
+                </a>
+            </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <script th:src="@{/js/fonta.js}"></script>
+	<script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</body>

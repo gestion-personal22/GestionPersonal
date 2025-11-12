@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>Lista</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="card mt-3">
+            <div class="card-header text-white bg-dark">
+                <h3>LISTA DE SOLICITUDES</h3>
+            </div>
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </nav>
+            <div class="card-body">
+                <table class="table table-striped table-responsive-sm table-bordered table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>N° SOLICITUD</th>
+                            <th>FECHA SOLICITUD</th>
+                            <th>APELLIDO</th>
+                            <th>NOMBRE</th>
+                            <th>D.N.I</th>
+                            <th>ANTIGUEDAD</th>
+                            <th>CARGO</th>
+                            <th>FECHA INICIO</th>
+                            <th>FECHA FINALIZACION</th>
+                            <th>TIEMPO LICENCIA</th>
+                            <th>TIPO LICENCIA</th>
+                            <th>ESTADO</th>
+                            <th width="15%" class="text-center"> <a class="btn btn-primary"><i class="fa fa-user-plus"
+                                        aria-hidden="true"></i> Agregar</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <span>
+                                    <p class="text-center">
+                                        <a class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <a class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    </p>
+                                </span>
+                            </td>
+                        </tr>
+                </table>
+
+                </tbody>
+            </div>
+        </div>
+    </div>
+
+	<script th:src="@{/js/fonta.js"}></script>
+	<script th:src="@{/js/jquery.slim.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+
+</html>
