@@ -46,7 +46,7 @@ public class Licencia {
     
     @ManyToOne()
 	@JoinColumn(name = "id_novedad")
-	private Novedad novedad;
+	private Novedad nove;
     
 	public Licencia() {
 		super();
@@ -65,7 +65,7 @@ public class Licencia {
 		this.fechaFin = fechaFin;
 		this.legajo = legajo;
 		this.tipoLicencia = tipoLicencia;
-		this.novedad = novedad;
+		this.nove = novedad;
 	}
 
 
@@ -143,11 +143,11 @@ public class Licencia {
 	}
 
 	public Novedad getNovedad() {
-		return novedad;
+		return nove;
 	}
 
 	public void setNovedad(Novedad novedad) {
-		this.novedad = novedad;
+		this.nove = novedad;
 	}
     
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" >
+    <link type="text/css" rel="stylesheet" th:href="@{/css/fonta.css}" > 
+        
+    <title>Marca Asistencia</title>
+</head>
+<body>
+
+    <div class="container mt-5 ">
+        <div class="card shadow"> 
+            <div class="card-header text-white bg-dark">
+                <h3 class="text-center">Registro De Asistencia</h3>
+            </div>
+            <div class="card-body">
+
+                <form action="/registrarAsistencia" method="POST" id="attendanceForm"> 
+                    <input type="hidden" name="idRegistro">
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label h5"> Seleccione el Empleado:</label>
+                            <div class="input-group input-group-lg"> 
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user-check"></i></span>
+                                </div>
+                                <select class="form-control" name="employeeId" id="employeeSelect" required>
+                                    <option value="" selected disabled>-- Elija su nombre --</option>
+                                    <option value="1">Claribel Arias</option>
+                                    <option value="2">Pablo Farias</option>
+                                    <option value="3">Joel Ruiz</option>
+                                    <option value="4">Luza Carmen</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label h5"> Buscar por DNI:</label>
+                            <div class="input-group input-group-lg"> 
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="dniSearchInput" placeholder="Ingrese DNI del empleado">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+
+                    <h5 class="text-secondary mb-3"> Datos Personales:</h5>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted">Nombre y Apellido:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="employeeName" disabled value="N/A">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted">Cargo:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="employeeJobTitle" disabled value="N/A">
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted">DNI:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-fingerprint"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="employeeDNI" disabled value="N/A">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted">Correo Electrónico:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="employeeEmail" disabled value="N/A">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted"> Fecha de Asistencia:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control font-weight-bold" id="currentDate" value="Fecha actual" disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <label class="col-form-label text-muted"> Hora de Asistencia:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-clock"></i></span>
+                                </div>
+                                <input type="text" class="form-control font-weight-bold" id="currentTime" value="Hora actual" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group text-center mt-5">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitButton" style="padding: 15px 30px; font-size: 1.2rem;">
+                            <i class="fa fa-hand-point-up"></i> Marcar Asistencia
+                        </button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>

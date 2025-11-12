@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <!-- <link type="text/css" rel="stylesheet" href="css/estiloA.css"> -->
+        
+    <title>Carga</title>
+</head>
+<body>
+
+    <div class="container mt-5 ">
+        <div class="card">
+            <div class="card-header text-white bg-dark">
+                <h3 class="text-center">Registro De Asistencia</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <input type="hidden">
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Hora De Entrada:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="07:00" disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Hora De Salida</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="13:00" disabled>
+                            </div>
+                        </div>
+                 </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Fecha Nacimiento</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Seleccione un empleado: </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-check"></i></span>
+                                </div>
+                                <select class="form-control" required>
+                                    <option>-</option>
+<option>Claribel Arias</option>
+<option>Pablo Farias</option>
+<option>Joel Ruiz</option>
+<option>Luza Carmen</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </div>
+                        
+ <div class="form-group row">
+                        
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Estado De Asistencia</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <select class="form-control" required>
+<option>-</option>
+<option>Ausente</option>
+<option>Presente</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-save"></i>Guardar
+                        </button>
+                        <a class="btn btn-danger">
+                            <i class="fa fa-close"></i>Cancelar
+                        </a>
+                    </div>     
+                
+
+<div>
+
+</div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fonta.js"></script>
+</body>
+</html>
