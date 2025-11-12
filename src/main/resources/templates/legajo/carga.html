@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="htpp://www.thymeleaf.org">
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" >
+
+    <!-- <link type="text/css" rel="stylesheet" href="css/estiloA.css"> -->
+        
+    <title>Registro Legajos</title>
+</head>
+<body>
+      <!-- navbar para contener todo el menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container text-light">
+            <strong>ARÉA PERSONAL</strong>
+            <!-- boton para el despliegue -->
+             <button class="navbar navbar-toggler" type="button" data-toggle="collapse"
+             data-target="#menuprincipal" aria-controls="menuprincipal"
+             aria-expanded="false">
+             <span class="navbar-toggler-icon"></span>
+            </button>
+        <!-- lista de menu - forma hori o colapsado -->
+            <div class="collapse navbar-collapse" id="menuprincipal">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">INCIO <span class="sr-only"> (current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">LEGAJO<span class="sr-only"> (current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">LICENCIA<span class="sr-only"> (current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">ASISTENCIA <span class="sr-only"> (current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">NÓMINA <span class="sr-only"> (current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 ">
+        <div class="card">
+            <div class="card-header text-white bg-dark">
+                <h3 class="text-center">Nuevo Legajo</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <input type="hidden">
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Nombre</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Apellido</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                 </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Fecha Nacimiento</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">DNI</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                                </div>
+                                <input type="number" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">CUIL</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="number" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Correo</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Telefono</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Titulo</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-graduation-cap"></i></span>
+                                </div>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>    
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Direccion</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-home"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Estado Civil</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-friends"></i></span>
+                                </div>
+                                <select class="form-control" required>
+                                    <option value="Habilitado"> -- </option>
+                                    <option value="Inhabilitado">Soltero</option>
+                                    <option value="Inhabilitado">Casado</option>
+                                    <option value="Inhabilitado">Divorciado</option>
+                                    <option value="Inhabilitado">Viudo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <label class="col-form-label">Cargo</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                                </div>
+                                <select class="form-control" required>
+                                    <option value="Habilitado"> -- </option>
+                                    <option value="Habilitado">Auxiliar administrativo</option>
+                                    <option value="Inhabilitado">Maestranza</option>
+                                    <option value="Inhabilitado">Peon general</option>
+                                    <option value="Inhabilitado">Director de Area</option>
+                                    <option value="Inhabilitado">Secretario de gobierno</option>
+                                    <option value="Inhabilitado">Contador</option>
+                                    <option value="Inhabilitado">Secretario de hacienda</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </div>
+                        
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-save"></i> Guardar
+                        </button>
+
+                        <a class="btn btn-secondary">
+                            <i class="fa fa-users"></i> Agregar Grupo Familiar
+                        </a>
+
+                        <a class="btn btn-danger">
+                            <i class="fa fa-close"></i> Cancelar
+                        </a>
+                    </div>                
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/fonta.js}"></script>
+</body>
+</html>
