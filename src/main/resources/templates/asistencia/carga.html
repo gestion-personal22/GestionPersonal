@@ -11,6 +11,8 @@
 </head>
 <body>
 
+	<header th:replace="Home/inicio::header" ></header>
+	
     <div class="container mt-5 ">
         <div class="card shadow"> 
             <div class="card-header text-white bg-dark">
@@ -127,6 +129,8 @@
             </div>
         </div>
     </div>
+	
+	<footer th:replace="Home/inicio::footer"> </footer>
 
     <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
     <script th:src="@{/js/popper.min.js}"></script>

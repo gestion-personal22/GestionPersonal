@@ -13,41 +13,9 @@
     <title>Registro Legajos</title>
 </head>
 <body>
-      <!-- navbar para contener todo el menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container text-light">
-            <strong>ARÉA PERSONAL</strong>
-            <!-- boton para el despliegue -->
-             <button class="navbar navbar-toggler" type="button" data-toggle="collapse"
-             data-target="#menuprincipal" aria-controls="menuprincipal"
-             aria-expanded="false">
-             <span class="navbar-toggler-icon"></span>
-            </button>
-        <!-- lista de menu - forma hori o colapsado -->
-            <div class="collapse navbar-collapse" id="menuprincipal">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">INCIO <span class="sr-only"> (current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">LEGAJO<span class="sr-only"> (current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">LICENCIA<span class="sr-only"> (current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">ASISTENCIA <span class="sr-only"> (current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">NÓMINA <span class="sr-only"> (current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
+	<header th:replace="Home/inicio::header" ></header>
+	
     <div class="container mt-5 ">
         <div class="card">
             <div class="card-header text-white bg-dark">
@@ -219,7 +187,7 @@
 
 
 
-
+	<footer th:replace="Home/inicio::footer"> </footer>
 
     
     <script th:src="@{/js/jquery-3.7.1.min.js}"></script>

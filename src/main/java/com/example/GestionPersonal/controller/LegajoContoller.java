@@ -64,4 +64,10 @@ public class LegajoContoller {
 		return null;
 	}
 	
+	@GetMapping("/pag/cargar")
+	public String paginaCargar() {
+		
+		return "legajo/carga";
+	}
+	
 }

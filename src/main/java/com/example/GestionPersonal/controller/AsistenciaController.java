@@ -63,6 +63,6 @@ public class AsistenciaController {
 	@GetMapping("/pag/cargar")
 	public String paginaCargar() {
 		
-		return "Asistencia/carga";
+		return "asistencia/carga";
 	}
 }

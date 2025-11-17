@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" >
+
+    <title>Inicio</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+	<header th:fragment="header">
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		       <div class="container text-light">
+		           <strong>ARÉA PERSONAL</strong>
+		           <button class="navbar navbar-toggler" type="button" data-toggle="collapse"
+		            data-target="#menuprincipal" aria-controls="menuprincipal"
+		            aria-expanded="false">
+		            <span class="navbar-toggler-icon"></span>
+		           </button>
+		       <div class="collapse navbar-collapse" id="menuprincipal">
+		               <ul class="navbar-nav ml-auto">
+		                   <li class="nav-item active">
+                               <a class="nav-link" th:href="@{/inicio}">INICIO <span class="sr-only"> (current)</span></a>
+		                   </li>
+		                   <li class="nav-item active">
+                               <a class="nav-link" th:href="@{/legajo/pag/cargar}">LEGAJO<span class="sr-only"> (current)</span></a>
+		                   </li>
+		                   <li class="nav-item active">
+                               <a class="nav-link" th:href="@{/licencia/pag/cargar}">LICENCIA<span class="sr-only"> (current)</span></a>
+		                   </li>
+		                   <li class="nav-item active">
+                               <a class="nav-link" th:href="@{/asistencia/pag/cargar}">ASISTENCIA <span class="sr-only"> (current)</span></a>
+		                   </li>
+		                   <li class="nav-item active">
+                               <a class="nav-link" th:href="@{/nomina/pag/cargar}">NÓMINA <span class="sr-only"> (current)</span></a>
+		                   </li>
+		                   <li class="nav-item dropdown">
+		                   </li>
+		               </ul>
+		           </div>
+		       </div>
+		   </nav>
+
+	</header>
+
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col">
+                <a th:href="@{/legajo/pag/cargar}" class="btn btn-success btn-lg">LEGAJO</a>
+            </div>
+            <div class="col">
+                <a th:href="@{/asistencia/pag/cargar}" class="btn btn-primary btn-lg">ASISTENCIA</a>
+            </div>
+            <div class="col">
+                <a th:href="@{/licencia/pag/cargar}" class="btn btn-warning btn-lg">LICENCIA</a>
+            </div>
+            <div class="col">
+                <a th:href="@{/nomina/pag/cargar}" class="btn btn-warning btn-lg">NOMINA</a>
+            </div>
+        </div>
+    </div>
+
+	<footer class="main-footer bg-dark mt-auto py-3" th:fragment="footer">
+
+		<div class="container text-light">
+
+				<strong>Copyright &copy; 2025-2026 <a href="#">Instituto de Carreras Superiores N° 6030</a>.</strong>
+
+								<div class="float-right d-none d-sm-inline-block">
+									<b>Version</b> 1.0
+								</div>
+
+	        </div>
+
+	</footer>
+
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/fonta.js}"></script>
+</body>
+</html>

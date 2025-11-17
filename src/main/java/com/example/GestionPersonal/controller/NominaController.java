@@ -55,4 +55,10 @@ public class NominaController {
 		
 		return null;
 	}
+	
+	@GetMapping("/pag/cargar")
+	public String paginaCargar() {
+		
+		return "nomina/carga";
+	}
 }

@@ -49,4 +49,10 @@ public class LicenciaController {
 		model.addAttribute("listLic",servLicencia.listarLicencias());
 		return null;
 	}
+	
+	@GetMapping("/pag/cargar")
+	public String paginaCargar() {
+		
+		return "licencia/carga";
+	}
 }

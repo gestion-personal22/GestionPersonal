@@ -10,6 +10,9 @@
 </head>
 
 <body>
+	
+	<header th:replace="Home/inicio::header" ></header>
+	
     <div class="container mt-5 ">
         <div class="card">
             <div class="card-header text-white bg-dark">
@@ -154,6 +157,8 @@
     </div>
     </div>
 
+	<footer th:replace="Home/inicio::footer"> </footer>
+	
     <script th:src="@{/js/fonta.js}"></script>
 	<script th:src="@{/js/jquery.slim.min.js}"></script>
     <script th:src="@{/js/popper.min.js}"></script>
