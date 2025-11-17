@@ -70,4 +70,10 @@ public class LegajoContoller {
 		return "legajo/carga";
 	}
 	
+	@GetMapping("/pag/listar")
+	public String paginaListar() {
+		
+		return "legajo/lista";
+	}
+	
 }

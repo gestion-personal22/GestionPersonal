@@ -65,4 +65,11 @@ public class AsistenciaController {
 		
 		return "asistencia/carga";
 	}
+	
+	@GetMapping("/pag/listar")
+	public String paginaListar() {
+		
+		return "asistencia/lista";
+	}
+	
 }

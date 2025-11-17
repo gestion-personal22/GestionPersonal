@@ -55,4 +55,10 @@ public class LicenciaController {
 		
 		return "licencia/carga";
 	}
+	
+	@GetMapping("/pag/listar")
+	public String paginaListar() {
+		
+		return "licencia/lista";
+	}
 }

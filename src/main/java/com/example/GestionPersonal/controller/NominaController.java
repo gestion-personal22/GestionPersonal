@@ -61,4 +61,10 @@ public class NominaController {
 		
 		return "nomina/carga";
 	}
+	
+	@GetMapping("/pag/listar")
+	public String paginaListar() {
+		
+		return "nomina/lista";
+	}
 }
