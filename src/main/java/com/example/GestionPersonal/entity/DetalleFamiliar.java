@@ -24,13 +24,10 @@ public class DetalleFamiliar {
 	private String dni;
 	private String cuil;
 	private String telefono;
+	private String direccion;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaNacimiento;
-	
-	@OneToOne
-	@JoinColumn(name = "id_Direccion")
-	private Direccion direccion;
 	
 	@OneToOne
 	@JoinColumn(name = "id_Tipo")
@@ -45,7 +42,7 @@ public class DetalleFamiliar {
 	}
 
 	public DetalleFamiliar(Long id, String nombre, String apellido, String dni, String cuil, String telefono,
-			LocalDate fechaNacimiento, Direccion direccion, TipoFamiliar tipo, Legajo legajo) {
+			LocalDate fechaNacimiento, String direccion, TipoFamiliar tipo, Legajo legajo) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -115,11 +112,11 @@ public class DetalleFamiliar {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Direccion getDireccion() {
+	public String getDireccion() {
 		return direccion;
 	}
 
-	public void setDireccion(Direccion direccion) {
+	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
 

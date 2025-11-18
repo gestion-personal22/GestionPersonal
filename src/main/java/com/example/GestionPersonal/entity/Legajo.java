@@ -33,10 +33,7 @@ public class Legajo {
 	private String correo;
 	private String telefono;
 	private String titulo;
-	
-	@OneToOne
-	@JoinColumn(name = "id_direccion")
-	private Direccion direccion;
+	private String direccion;
 	
 	@OneToOne
 	@JoinColumn(name = "id_estadoCivil")
@@ -63,8 +60,7 @@ public class Legajo {
 	}
 
 	public Legajo(Long id, LocalDate fechaRegistro, LocalDate fechaNacimiento, String nombre, String apellido,
-			String dni, String cuil, String correo, String telefono, String titulo, Direccion direccion,
-			EstadoCivil estadoCivil, Cargo cargo, List<DetalleFamiliar> familiares, Licencia licencia,
+			String dni, String cuil, String correo, String telefono, String titulo,String direccion, EstadoCivil estadoCivil, Cargo cargo, List<DetalleFamiliar> familiares, Licencia licencia,
 			Asistencia asistencia, Novedad novedad) {
 		super();
 		this.id = id;
@@ -198,11 +194,11 @@ public class Legajo {
 		this.titulo = titulo;
 	}
 
-	public Direccion getDireccion() {
+	public String getDireccion() {
 		return direccion;
 	}
 
-	public void setDireccion(Direccion direccion) {
+	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
 

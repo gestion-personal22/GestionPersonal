@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import com.example.GestionPersonal.entity.Legajo;
+import com.example.GestionPersonal.service.ICargoService;
+import com.example.GestionPersonal.service.IEstadoCivilService;
 import com.example.GestionPersonal.service.ILegajoService;
 
 @Controller
@@ -17,14 +21,20 @@ public class LegajoContoller {
 	@Autowired
 	private ILegajoService servLegajo;
 	
+	@Autowired
+	private ICargoService servCargo;
 	
+	@Autowired
+	private IEstadoCivilService servEstadoCivil;
 	
 	@PostMapping("/crear")
-	public String crearLegajo (Legajo legajo) {
+	public String crearLegajo (Legajo legajo, RedirectAttributes redirectAttributes) {
 		
 		servLegajo.crearLegajo(legajo);
 		
-		return null;
+		redirectAttributes.addFlashAttribute("mensaje", "Legajo creado con éxito.");
+		
+		return "redirect:/legajo/pag/cargar";
 	}
 	
 	
@@ -56,22 +66,24 @@ public class LegajoContoller {
 	}
 	
 	
-	@GetMapping ("/lista")
-	public String listarLegajo (Model model) {
-	
-		model.addAttribute("listLeg", servLegajo.listarLegajos());
-		
-		return null;
-	}
-	
 	@GetMapping("/pag/cargar")
-	public String paginaCargar() {
+	public String paginaCargar(Model model) {
+		
+		Legajo l = new Legajo();		
+		
+		model.addAttribute("legajo", l);
+		
+        model.addAttribute("listaEstadosCiviles", servEstadoCivil.ListaEstadoC());
+		
+		model.addAttribute("listaCargos", servCargo.ListaCargo());
 		
 		return "legajo/carga";
 	}
 	
 	@GetMapping("/pag/listar")
-	public String paginaListar() {
+	public String paginaListar(Model model) {
+		
+		model.addAttribute("listaLegajo", servLegajo.listarLegajos());
 		
 		return "legajo/lista";
 	}
